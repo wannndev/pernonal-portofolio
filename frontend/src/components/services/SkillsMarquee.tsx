@@ -22,7 +22,7 @@ export function SkillsMarquee({ skillsRow1, skillsRow2 }: SkillsMarqueeProps) {
   const row2Items = getTrackItems(skillsRow2);
 
   return (
-    <MotionPreset fade blur delay={0.2} className="relative pt-4">
+    <MotionPreset fade blur delay={0.2} className="relative pt-4 w-full min-w-0 max-w-full overflow-hidden">
       <style>{`
         @keyframes skillsScrollLeft {
           0% { transform: translate3d(0, 0, 0); }
@@ -57,7 +57,7 @@ export function SkillsMarquee({ skillsRow1, skillsRow2 }: SkillsMarqueeProps) {
       <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-24 bg-gradient-to-l from-[var(--background)] to-transparent max-sm:hidden" />
 
       {/* Row 1 Skills Marquee */}
-      <div className="w-full overflow-hidden mb-3">
+      <div className="w-full max-w-full overflow-hidden mb-3 min-w-0">
         <div className="skills-marquee-left">
           <div className="flex shrink-0 items-center gap-3 pr-3">
             {row1Items.map((skill, idx) => (
@@ -83,7 +83,7 @@ export function SkillsMarquee({ skillsRow1, skillsRow2 }: SkillsMarqueeProps) {
       </div>
 
       {/* Row 2 Skills Marquee (Reverse) */}
-      <div className="w-full overflow-hidden">
+      <div className="w-full max-w-full overflow-hidden min-w-0">
         <div className="skills-marquee-right">
           <div className="flex shrink-0 items-center gap-3 pr-3">
             {row2Items.map((skill, idx) => (

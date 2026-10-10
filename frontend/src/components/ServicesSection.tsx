@@ -53,9 +53,9 @@ export function ServicesSection({
     description: language === "id" ? d.services.items.s1Desc : (sortedServices[0]?.description || d.services.items.s1Desc),
     icon: sortedServices[0]?.icon || "palette",
     images: sortedServices[0]?.images && sortedServices[0].images.length > 0 ? sortedServices[0].images : [
-      "/images/services/image-04.webp",
-      "/images/services/image-05.webp",
-      "/images/services/image-06.webp",
+      "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp",
+      "/uploads/1791629952_whatsapp-image-2026-10-10-at-55831-pm.webp",
+      "/uploads/1791630647_whatsapp-image-2026-10-10-at-61030-pm.webp",
     ],
   };
 
@@ -76,9 +76,9 @@ export function ServicesSection({
     description: language === "id" ? d.services.items.s4Desc : (sortedServices[3]?.description || d.services.items.s4Desc),
     icon: sortedServices[3]?.icon || "framer",
     images: sortedServices[3]?.images && sortedServices[3].images.length > 0 ? sortedServices[3].images : [
-      "/images/services/image-01.webp",
-      "/images/services/image-02.webp",
-      "/images/services/image-03.webp",
+      "/uploads/1791630574_gemini-generated-image-qxboo0qxboo0qxbo.webp",
+      "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp",
+      "/uploads/1791629952_whatsapp-image-2026-10-10-at-55831-pm.webp",
     ],
   };
 
@@ -86,20 +86,20 @@ export function ServicesSection({
   const skillsRow2 = propSkillsRow2 && propSkillsRow2.length > 0 ? propSkillsRow2 : defaultSkillsRow2;
 
   return (
-    <section id="services" className="relative border-y border-[var(--border)] xl:flex">
+    <section id="services" className="relative border-y border-[var(--border)] xl:flex overflow-hidden w-full min-w-0 max-w-full">
       {/* Left side dot pattern */}
       <div className="m-6 w-full shrink-2 bg-[radial-gradient(circle_at_center,color-mix(in_oklab,var(--primary)_15%,transparent)_2px,transparent_2px)] bg-size-[18px_18px] max-xl:hidden" />
 
       {/* Main architectural container */}
-      <div className="mx-auto max-w-6xl w-full space-y-16 px-4 py-16 lg:border-x border-[var(--border)] bg-[var(--background)] sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-6xl w-full space-y-16 px-4 py-16 lg:border-x border-[var(--border)] bg-[var(--background)] sm:px-6 lg:px-8 min-w-0 max-w-full overflow-hidden">
         {/* Section Header */}
-        <MotionPreset fade blur slide={{ direction: "up", offset: 30 }} className="space-y-4">
+        <MotionPreset fade blur slide={{ direction: "up", offset: 30 }} className="space-y-4 w-full min-w-0">
           <div>
             <span className="inline-flex items-center justify-center rounded-full border border-[var(--border)] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[var(--muted-foreground)] bg-[var(--card)]">
               {d.services.badge}
             </span>
           </div>
-          <div className="flex justify-between gap-6 max-md:flex-col items-start md:items-end">
+          <div className="flex justify-between gap-6 max-md:flex-col items-start md:items-end w-full min-w-0">
             <div className="max-w-xl">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl text-[var(--foreground)]">
                 <BlurText
@@ -124,19 +124,19 @@ export function ServicesSection({
         </div>
 
         {/* Asymmetric Bento Grid */}
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full min-w-0 max-w-full">
           {/* Left Column */}
-          <MotionPreset fade blur slide={{ direction: "up", offset: 35 }} delay={0.1} className="flex flex-col gap-6">
+          <MotionPreset fade blur slide={{ direction: "up", offset: 35 }} delay={0.1} className="flex flex-col gap-6 w-full min-w-0 max-w-full overflow-hidden">
             {/* Card 1: (Tall card with stacked preview) */}
-            <div className="group rounded-3xl bg-[var(--muted)]/50 border border-transparent hover:border-[var(--border)] transition-all duration-300 p-6 sm:p-8 flex flex-col justify-between overflow-hidden shadow-none ring-0">
-              <div className="space-y-3">
+            <div className="group rounded-3xl bg-[var(--muted)]/50 border border-transparent hover:border-[var(--border)] transition-all duration-300 p-5 sm:p-8 flex flex-col justify-between overflow-hidden shadow-none ring-0 w-full min-w-0 max-w-full">
+              <div className="space-y-3 w-full min-w-0">
                 <div className="flex items-center gap-2.5 text-xl font-semibold text-[var(--foreground)]">
-                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--background)] border border-[var(--border)] shadow-2xs">
+                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--background)] border border-[var(--border)] shadow-2xs shrink-0">
                     {getServiceIcon(s1.icon, "palette")}
                   </div>
                   <span>{s1.title}</span>
                 </div>
-                <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-[var(--muted-foreground)] leading-relaxed break-words">
                   {s1.description}
                 </p>
               </div>
@@ -146,24 +146,24 @@ export function ServicesSection({
                   s1.images && s1.images.length > 0
                     ? s1.images.map((src, idx) => ({ id: `s1-${idx}`, src, alt: s1.title }))
                     : [
-                        { id: "img-06", src: "/images/services/image-06.webp", alt: "Transforming Ideas into Impact" },
-                        { id: "img-04", src: "/images/services/image-04.webp", alt: "Mexican Grilled Cheese Mockup" },
-                        { id: "img-05", src: "/images/services/image-05.webp", alt: "Innovators Platform Mockup" },
+                        { id: "img-01", src: "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp", alt: "UmrohApps" },
+                        { id: "img-02", src: "/uploads/1791629952_whatsapp-image-2026-10-10-at-55831-pm.webp", alt: "Billing WA" },
+                        { id: "img-03", src: "/uploads/1791630647_whatsapp-image-2026-10-10-at-61030-pm.webp", alt: "Personal Portofolio" },
                       ]
                 }
               />
             </div>
 
             {/* Card 2: (Compact card, text only) */}
-            <div className="group rounded-3xl bg-[var(--card)] border border-[var(--border)] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-300 p-6 sm:p-8 shadow-2xs">
-              <div className="space-y-3">
+            <div className="group rounded-3xl bg-[var(--card)] border border-[var(--border)] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-300 p-5 sm:p-8 shadow-2xs w-full min-w-0 max-w-full">
+              <div className="space-y-3 w-full min-w-0">
                 <div className="flex items-center gap-2.5 text-xl font-semibold text-[var(--foreground)]">
-                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--secondary)] border border-[var(--border)] shadow-2xs">
+                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--secondary)] border border-[var(--border)] shadow-2xs shrink-0">
                     {getServiceIcon(s2.icon, "laptop")}
                   </div>
                   <span>{s2.title}</span>
                 </div>
-                <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-[var(--muted-foreground)] leading-relaxed break-words">
                   {s2.description}
                 </p>
               </div>
@@ -171,17 +171,17 @@ export function ServicesSection({
           </MotionPreset>
 
           {/* Right Column */}
-          <MotionPreset fade blur slide={{ direction: "up", offset: 35 }} delay={0.18} className="flex flex-col gap-6">
+          <MotionPreset fade blur slide={{ direction: "up", offset: 35 }} delay={0.18} className="flex flex-col gap-6 w-full min-w-0 max-w-full overflow-hidden">
             {/* Card 3: (Compact card, text only) */}
-            <div className="group rounded-3xl bg-[var(--card)] border border-[var(--border)] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-300 p-6 sm:p-8 shadow-2xs">
-              <div className="space-y-3">
+            <div className="group rounded-3xl bg-[var(--card)] border border-[var(--border)] hover:border-zinc-400 dark:hover:border-zinc-600 transition-all duration-300 p-5 sm:p-8 shadow-2xs w-full min-w-0 max-w-full">
+              <div className="space-y-3 w-full min-w-0">
                 <div className="flex items-center gap-2.5 text-xl font-semibold text-[var(--foreground)]">
-                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--secondary)] border border-[var(--border)] shadow-2xs">
+                  <div className="flex size-9 items-center justify-center rounded-xl bg-[var(--secondary)] border border-[var(--border)] shadow-2xs shrink-0">
                     {getServiceIcon(s3.icon, "pen-tool")}
                   </div>
                   <span>{s3.title}</span>
                 </div>
-                <p className="text-base sm:text-lg text-[var(--muted-foreground)] leading-relaxed">
+                <p className="text-sm sm:text-base lg:text-lg text-[var(--muted-foreground)] leading-relaxed break-words">
                   {s3.description}
                 </p>
               </div>

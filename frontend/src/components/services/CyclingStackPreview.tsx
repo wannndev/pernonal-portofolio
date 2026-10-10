@@ -36,7 +36,7 @@ export function CyclingStackPreview({ images }: CyclingStackPreviewProps) {
 
   return (
     <div
-      className="relative h-60.5 sm:h-[242px] w-full mt-6 cursor-pointer select-none"
+      className="relative h-56 sm:h-[242px] w-full max-w-full mt-4 sm:mt-6 cursor-pointer select-none overflow-hidden min-w-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => {
@@ -50,7 +50,7 @@ export function CyclingStackPreview({ images }: CyclingStackPreviewProps) {
       {cards.map((card, r) => (
         <motion.div
           key={card.id}
-          className="absolute left-1/2 w-full -translate-x-1/2"
+          className="absolute left-1/2 w-full max-w-full -translate-x-1/2"
           style={{ transformOrigin: "top center" }}
           animate={{
             top: -((r - 2) * 10),
@@ -63,7 +63,7 @@ export function CyclingStackPreview({ images }: CyclingStackPreviewProps) {
           <img
             src={card.src}
             alt={card.alt}
-            className="h-51.5 sm:h-[206px] w-full rounded-md object-contain"
+            className="h-44 sm:h-[206px] w-full max-w-full rounded-xl object-cover border border-[var(--border)] shadow-md bg-[var(--card)]"
           />
         </motion.div>
       ))}

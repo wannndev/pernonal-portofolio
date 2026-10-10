@@ -24,12 +24,12 @@ export function HeroBrandMarquee({ profile, brandLogos }: HeroBrandMarqueeProps)
       fade
       blur
       delay={0.25}
-      className="border-y border-[var(--border)] relative bg-dot-pattern w-full mt-auto"
+      className="border-y border-[var(--border)] relative bg-dot-pattern w-full mt-auto min-w-0 max-w-full overflow-hidden"
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:border-x border-[var(--border)] bg-[var(--background)] py-3 sm:py-4">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:border-x border-[var(--border)] bg-[var(--background)] py-3 sm:py-4 w-full min-w-0 max-w-full">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center w-full min-w-0 max-w-full">
           {/* Left: Designers rating */}
-          <div className="md:col-span-4 flex items-center gap-4">
+          <div className="md:col-span-4 flex items-center gap-4 min-w-0">
             <div className="flex -space-x-4">
               {[
                 "/images/about/image-21.webp",

@@ -81,7 +81,7 @@ export function PortfolioPageClient({ items, services }: PortfolioPageClientProp
                 const isExternal =
                   projectLink.startsWith("http://") || projectLink.startsWith("https://");
                 const imgLight =
-                  item.image_light || item.image || "/images/portfolio/image-01.webp";
+                  item.image_light || item.image || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp";
                 const imgDark = item.image_dark || item.imageDark || imgLight;
                 const tilt =
                   index % 2 === 0 ? "group-hover:rotate-3" : "group-hover:-rotate-3";

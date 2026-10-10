@@ -36,7 +36,11 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col">
-      <HeroSection profile={profile} brandLogos={brandLogos} />
+      <HeroSection
+        profile={profile}
+        brandLogos={brandLogos}
+        featuredProject={portfolioProjects?.[0]}
+      />
       <PortfolioSection projects={portfolioProjects} />
       <ServicesSection
         services={services}

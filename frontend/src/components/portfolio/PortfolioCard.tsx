@@ -33,7 +33,7 @@ export function PortfolioCard({
 }: PortfolioCardProps) {
   const projectLink = project.slug ? `/portfolio/${project.slug}` : (project.project_url || "#");
   const isExternal = projectLink.startsWith("http://") || projectLink.startsWith("https://");
-  const imgLight = project.image_light || "/images/portfolio/image-01.webp";
+  const imgLight = project.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp";
   const imgDark = project.image_dark || imgLight;
 
   const innerContent = (

@@ -45,8 +45,8 @@ async function findProject(slug: string) {
         title: matchedApi.title,
         description: matchedApi.description,
         liveUrl: matchedApi.project_url,
-        image: matchedApi.image_light || "/images/portfolio/image-01.webp",
-        imageDark: matchedApi.image_dark || matchedApi.image_light || "/images/portfolio/image-01.webp",
+        image: matchedApi.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp",
+        imageDark: matchedApi.image_dark || matchedApi.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp",
         bodyHtml: `
           <h2 id="overview" class="text-2xl font-semibold not-first:mt-10">Overview</h2>
           <p class="text-muted-foreground mt-3 text-base">${matchedApi.description}</p>

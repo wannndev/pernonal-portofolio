@@ -88,7 +88,7 @@ export function PortfolioDetailClient({
             <div className="w-full mb-12">
               <div className="overflow-hidden rounded-xl border border-border shadow-sm bg-muted/20">
                 <img
-                  src={project.image || project.image_light || "/images/portfolio/image-01.webp"}
+                  src={project.image || project.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp"}
                   alt={title}
                   className={`w-full max-h-[580px] object-cover object-top ${
                     (project.imageDark || project.image_dark) &&
@@ -165,12 +165,12 @@ export function PortfolioDetailClient({
                         } transition-transform duration-300`}
                       >
                         <img
-                          src={rel.image || rel.image_light || "/images/portfolio/image-01.webp"}
+                          src={rel.image || rel.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp"}
                           alt={rel.title}
                           className="w-full rounded-[11px] lg:h-93.5 lg:object-cover lg:object-center dark:hidden"
                         />
                         <img
-                          src={rel.imageDark || rel.image_dark || rel.image || rel.image_light || "/images/portfolio/image-01.webp"}
+                          src={rel.imageDark || rel.image_dark || rel.image || rel.image_light || "/uploads/1791629938_whatsapp-image-2026-10-10-at-55812-pm.webp"}
                           alt={rel.title}
                           className="hidden w-full rounded-[11px] lg:h-93.5 lg:object-cover lg:object-center dark:block"
                         />
