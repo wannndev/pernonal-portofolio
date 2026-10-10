@@ -14,9 +14,9 @@ export function AppLayoutWrapper({ children }: { children: React.ReactNode }) {
   }
 
   return (
-    <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-hidden">
+    <div className="flex flex-col min-h-screen w-full max-w-full overflow-x-clip">
       <Navbar />
-      <main className="flex-1 w-full max-w-full overflow-x-hidden">{children}</main>
+      <main className="flex-1 w-full max-w-full overflow-x-clip">{children}</main>
       <Footer />
     </div>
   );

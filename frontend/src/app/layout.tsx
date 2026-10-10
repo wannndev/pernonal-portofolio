@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${inter.variable} ${geistMono.variable} ${spaceGrotesk.variable} h-full antialiased`}
+      className={`${inter.variable} ${geistMono.variable} ${spaceGrotesk.variable} min-h-screen antialiased`}
       suppressHydrationWarning
     >
       <head>
@@ -61,7 +61,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href="/favicon.ico?v=2" />
         <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=2" />
       </head>
-      <body className={`${inter.className} min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-zinc-200 selection:text-black dark:selection:bg-zinc-800 dark:selection:text-white`}>
+      <body className={`${inter.className} min-h-screen flex flex-col bg-[var(--background)] text-[var(--foreground)] selection:bg-zinc-200 selection:text-black dark:selection:bg-zinc-800 dark:selection:text-white`}>
         <ThemeProvider>
           <LanguageProvider>
             <AppLayoutWrapper>{children}</AppLayoutWrapper>
