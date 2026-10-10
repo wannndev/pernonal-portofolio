@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 278 375" fill="currentColor">
+  <!-- Left Pillar -->
+  <polygon points="0,375 0,107 91,54 91,375" />
+  <!-- Top Loop -->
+  <polygon points="91,54 184,0 278,54 278,161 184,214 184,107" />
+  <!-- Diagonal Leg -->
+  <polygon points="91,267 184,214 278,268 278,375" />
+</svg>

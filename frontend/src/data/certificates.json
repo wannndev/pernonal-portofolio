@@ -1,0 +1,236 @@
+[
+  {
+    "id": "meta-frontend-developer",
+    "title": "Meta Front-End Developer",
+    "issuer": "Meta",
+    "issuerOrg": "Coursera & Meta Professional Certificates",
+    "category": "FRONTEND",
+    "image": "/images/certificates/meta-frontend.jpg",
+    "accentColor": "#0064E0",
+    "issueDate": "Jan 2026",
+    "expirationDate": "No Expiration",
+    "credentialId": "META-FED-89241-ID",
+    "verifyUrl": "https://coursera.org/verify/professional-cert/meta-frontend",
+    "description": "Validation of mastery in React architecture, state management, modern CSS/HTML5, UI engineering, component lifecycle, and web accessibility standards.",
+    "overview": "The Meta Front-End Developer Professional Certificate is an industry-standard credential designed by Meta engineering leaders. It rigorously assesses the ability to build production-grade, interactive web applications using React, JavaScript (ES6+), semantic HTML5, modern CSS methodologies, and automated UI testing.",
+    "skills": ["React", "JavaScript ES6+", "UI/UX", "Jest", "Responsive Design", "Git & GitHub", "RESTful API Integration"],
+    "curriculum": [
+      {
+        "title": "Advanced React & State Management",
+        "desc": "Mastering component lifecycle, context API, custom hooks, reducer patterns, and high-performance render optimization."
+      },
+      {
+        "title": "Interactive UI/UX & Responsive Web Layouts",
+        "desc": "Constructing dynamic web layouts with Flexbox, CSS Grid, animations, and WCAG accessibility standards."
+      },
+      {
+        "title": "Automated Testing & Quality Assurance",
+        "desc": "Writing robust unit tests and integration tests using Jest and React Testing Library to ensure fault-tolerant code."
+      },
+      {
+        "title": "Capstone Front-End Portfolio Application",
+        "desc": "Architecting a fully interactive web application featuring user booking workflows, state caching, and responsive design."
+      }
+    ],
+    "highlights": [
+      "9 Comprehensive Course Modules completed with honors",
+      "Official Meta-issued verified credential ID",
+      "Hands-on grading across 15+ real-world coding assignments"
+    ]
+  },
+  {
+    "id": "aws-solutions-architect",
+    "title": "AWS Solutions Architect",
+    "issuer": "Amazon Web Services",
+    "issuerOrg": "AWS Training & Certification",
+    "category": "CLOUD & DEVOPS",
+    "image": "/images/certificates/aws-architect.jpg",
+    "accentColor": "#FF9900",
+    "issueDate": "Nov 2025",
+    "expirationDate": "Nov 2028",
+    "credentialId": "AWS-SAA-391824-2025",
+    "verifyUrl": "https://aws.amazon.com/verification",
+    "description": "Demonstrates core technical expertise in designing resilient, high-performing, cost-effective, and secure distributed architectures on Amazon Web Services.",
+    "overview": "The AWS Certified Solutions Architect – Associate credential validates hands-on proficiency in designing cloud infrastructure using AWS services. It certifies the expertise to design resilient, high-performing, cost-optimized, and secure multi-tier distributed applications.",
+    "skills": ["AWS EC2 & S3", "Serverless Architecture", "RDS & DynamoDB", "VPC Networking", "IAM Security", "CloudFront CDN"],
+    "curriculum": [
+      {
+        "title": "Resilient High-Availability Architectures",
+        "desc": "Architecting multi-AZ deployments with auto-scaling, load balancing (ALB/NLB), and decoupled microservices using SQS & SNS."
+      },
+      {
+        "title": "Cloud Security & Identity Governance",
+        "desc": "Configuring least-privilege IAM policies, VPC security groups, network ACLs, KMS encryption, and WAF protection."
+      },
+      {
+        "title": "Data Storage & Distributed Databases",
+        "desc": "Optimizing relational databases (RDS PostgreSQL/MySQL), DynamoDB NoSQL caches, and multi-tier S3 storage lifecycles."
+      },
+      {
+        "title": "Cost Optimization & Disaster Recovery",
+        "desc": "Designing pilot-light and warm-standby disaster recovery strategies while reducing operational infrastructure spend."
+      }
+    ],
+    "highlights": [
+      "Passed official AWS Certified Solutions Architect Associate Examination",
+      "Validated knowledge in 30+ AWS core infrastructure services",
+      "Certified competence in building enterprise-grade cloud systems"
+    ]
+  },
+  {
+    "id": "google-ux-design",
+    "title": "Google UX Design Professional",
+    "issuer": "Google",
+    "issuerOrg": "Google Career Certificates",
+    "category": "UI/UX DESIGN",
+    "image": "/images/certificates/google-ux.jpg",
+    "accentColor": "#4285F4",
+    "issueDate": "Sep 2025",
+    "expirationDate": "No Expiration",
+    "credentialId": "GOOGLE-UXD-77192-2025",
+    "verifyUrl": "https://coursera.org/verify/professional-cert/google-ux-design",
+    "description": "Validation of the complete design sprint cycle: user research, empathy mapping, low-fidelity wireframing, interactive prototyping, and design system governance in Figma.",
+    "overview": "The Google UX Design Certificate validates comprehensive expertise in the entire user experience design lifecycle. Created by Google's senior design practitioners, it covers foundational research, wireframing, high-fidelity UI design in Figma, and usability testing.",
+    "skills": ["Figma", "User Research", "Wireframing", "Prototyping", "Design Systems", "Usability Testing", "Information Architecture"],
+    "curriculum": [
+      {
+        "title": "Foundations of User Experience (UX) Design",
+        "desc": "Understanding user-centered design principles, accessibility compliance, and bias elimination in research."
+      },
+      {
+        "title": "Empathize, Define, and Ideate",
+        "desc": "Conducting user interviews, building persona profiles, user journey maps, and competitive audit analyses."
+      },
+      {
+        "title": "Wireframing & Low-Fidelity Prototyping",
+        "desc": "Creating paper and digital wireframes, information architecture hierarchy, and clickable flow prototypes in Figma."
+      },
+      {
+        "title": "Design Systems & High-Fidelity UI",
+        "desc": "Building comprehensive design libraries with design tokens, typography scales, accessibility contrasts, and micro-interactions."
+      }
+    ],
+    "highlights": [
+      "7 Core Design Modules completed with honors distinction",
+      "3 End-to-end Case Studies created from scratch",
+      "Verified proficiency with Figma enterprise workflows"
+    ]
+  },
+  {
+    "id": "laravel-certified-developer",
+    "title": "Official Laravel Developer",
+    "issuer": "Laravel Certification",
+    "issuerOrg": "Laravel Certification Board",
+    "category": "BACKEND & API",
+    "image": "/images/certificates/laravel-dev.jpg",
+    "accentColor": "#FF2D20",
+    "issueDate": "Jul 2025",
+    "expirationDate": "No Expiration",
+    "credentialId": "LARAVEL-DEV-55421-2025",
+    "verifyUrl": "https://certification.laravel.com",
+    "description": "Official worldwide certification validating expert command of Laravel 11, database migrations, Eloquent performance tuning, queue systems, RESTful APIs, and PHPUnit testing.",
+    "overview": "The official Laravel Certification exam assesses deep knowledge of the Laravel framework and modern PHP best practices. Developed under the supervision of Laravel core contributors, it tests architecture, security, database optimization, queue workers, and automated test-driven development.",
+    "skills": ["Laravel 11", "PHP 8.3", "Eloquent ORM", "RESTful API", "Redis & Queues", "PHPUnit", "Security & Middleware"],
+    "curriculum": [
+      {
+        "title": "Core Architecture & Dependency Injection",
+        "desc": "Mastery of the Service Container, Service Providers, Contracts, Facades, and middleware execution lifecycles."
+      },
+      {
+        "title": "Database Optimization & Advanced Eloquent",
+        "desc": "Polymorphic relationships, eager loading prevention (N+1 query resolution), query builders, and database transactions."
+      },
+      {
+        "title": "Asynchronous Processing & Redis Queues",
+        "desc": "Configuring event listeners, scheduled background tasks, queue workers, job batching, and failure retry strategies."
+      },
+      {
+        "title": "REST API Architecture & Authentication",
+        "desc": "Building high-performance JSON REST APIs with Sanctum/Passport token authentication, rate limiting, and resource transforms."
+      }
+    ],
+    "highlights": [
+      "Official verification on certification.laravel.com registry",
+      "Validated command of PHP 8.3 & Laravel 11 modern ecosystems",
+      "Passed testing and security domain requirements with distinction"
+    ]
+  },
+  {
+    "id": "fullstack-developer-expert",
+    "title": "Full-Stack Developer Expert",
+    "issuer": "Dicoding Academy",
+    "issuerOrg": "Dicoding Academy Indonesia",
+    "category": "FULL STACK",
+    "image": "/images/certificates/fullstack-expert.jpg",
+    "accentColor": "#10B981",
+    "issueDate": "May 2025",
+    "expirationDate": "May 2028",
+    "credentialId": "DICODING-FS-10492-ID",
+    "verifyUrl": "https://dicoding.com/certificates/DICODING-FS-10492-ID",
+    "description": "Comprehensive engineering certification covering full-stack web architecture, PostgreSQL & MySQL modeling, microservices, containerization with Docker, and CI/CD pipelines.",
+    "overview": "An exhaustive multi-month engineering curriculum certifying the ability to build, optimize, and maintain production web platforms from UI interface to backend microservices, database transactions, automated deployment pipelines, and Docker containers.",
+    "skills": ["Node.js", "React", "PostgreSQL", "Docker", "REST API", "Clean Code", "CI/CD"],
+    "curriculum": [
+      {
+        "title": "Enterprise Database Engineering",
+        "desc": "Relational schema normalization, complex SQL joins, index tuning, and database migrations in PostgreSQL & MySQL."
+      },
+      {
+        "title": "Microservices & Clean Architecture",
+        "desc": "Structuring modular codebases adhering to SOLID principles, dependency inversion, and clean domain-driven architecture."
+      },
+      {
+        "title": "Containerization & DevOps Pipelines",
+        "desc": "Creating multi-stage Docker builds, container orchestration, environment segregation, and automated GitHub Actions CI/CD."
+      },
+      {
+        "title": "Security, Caching & Performance",
+        "desc": "Implementing CORS policies, JWT token rotators, Redis caching layers, and stress-testing under heavy concurrent loads."
+      }
+    ],
+    "highlights": [
+      "Top Graduate rating with 5/5 stars evaluation score",
+      "Verified capstone project evaluated by industry code reviewers",
+      "Comprehensive test coverage exceeding 90% code coverage"
+    ]
+  },
+  {
+    "id": "advanced-react-expert",
+    "title": "Advanced React Web Expert",
+    "issuer": "The Advanced Tech Academy",
+    "issuerOrg": "Dicoding & Tech Academy",
+    "category": "FRONTEND",
+    "image": "/images/certificates/react-expert.jpg",
+    "accentColor": "#06B6D4",
+    "issueDate": "Mar 2025",
+    "expirationDate": "Mar 2028",
+    "credentialId": "REACT-EXP-9923-ID",
+    "verifyUrl": "https://dicoding.com/certificates/DICODING-REACT-9923-ID",
+    "description": "Demonstrates high-level competence in advanced state machines, custom hooks, atomic design principles, automated testing with Jest, and web vital optimizations.",
+    "overview": "Certification validating expert-level knowledge of React 19 architecture, Next.js Server Components, client-side caching strategies, custom hook patterns, and advanced Web Vitals performance tuning.",
+    "skills": ["React 19", "Redux Toolkit", "Next.js", "TDD Testing", "Performance Optimization", "TypeScript"],
+    "curriculum": [
+      {
+        "title": "React 19 & Next.js Server Components",
+        "desc": "Building hybrid architectures utilizing React Server Components (RSC), Suspense streaming, and zero-bundle-size rendering."
+      },
+      {
+        "title": "Complex Global State Orchestration",
+        "desc": "Managing enterprise client state with Redux Toolkit, RTK Query, normalized caching, and optimistic UI updates."
+      },
+      {
+        "title": "Test-Driven Development (TDD)",
+        "desc": "Enforcing code reliability through unit, integration, and mocking strategies using Vitest, Jest, and MSW (Mock Service Worker)."
+      },
+      {
+        "title": "Core Web Vitals & Bundle Optimization",
+        "desc": "Analyzing flame charts, memory leak identification, dynamic code splitting, and sub-second Largest Contentful Paint (LCP)."
+      }
+    ],
+    "highlights": [
+      "Completed top-tier advanced React certification with distinction",
+      "Full compliance with strict TypeScript strict-mode standards",
+      "Over 100+ hours of advanced problem solving and architecture review"
+    ]
+  }
+]
