@@ -1,6 +1,6 @@
 FROM php:8.3-cli-alpine
 
-# Install system dependencies & PHP extensions
+# Install system dependencies & PHP extensions (supports both MySQL and PostgreSQL)
 RUN apk add --no-cache \
     curl \
     git \
@@ -8,8 +8,9 @@ RUN apk add --no-cache \
     libpng-dev \
     libxml2-dev \
     libzip-dev \
+    postgresql-dev \
     oniguruma-dev \
-    && docker-php-ext-install pdo pdo_mysql mbstring zip bcmath
+    && docker-php-ext-install pdo pdo_mysql pdo_pgsql pgsql mbstring zip bcmath
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
@@ -22,7 +23,7 @@ COPY . .
 # Run composer install
 RUN composer install --no-dev --optimize-autoloader --no-interaction
 
-# Expose port (Railway injects $PORT dynamically)
+# Expose port (8000 by default)
 EXPOSE 8000
 
 # Start command: migrate, cache, and serve with PHP built-in server

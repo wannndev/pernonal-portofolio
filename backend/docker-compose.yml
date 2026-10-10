@@ -1,0 +1,59 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: portfolio-backend
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=WannnDev
+      - APP_ENV=production
+      - APP_KEY=base64:wAfoOIkZ/BFFdo+muRZXcwkrXs5RqcmYPd0QBfM6nno=
+      - APP_DEBUG=false
+      - APP_URL=https://api.wannndev.online
+      - DB_CONNECTION=pgsql
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_DATABASE=craft_portfolio
+      - DB_USERNAME=wannndev
+      - DB_PASSWORD=wannndevsecret123
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: portfolio-postgres
+    restart: unless-stopped
+    environment:
+      - POSTGRES_DB=craft_portfolio
+      - POSTGRES_USER=wannndev
+      - POSTGRES_PASSWORD=wannndevsecret123
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wannndev -d craft_portfolio"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  caddy:
+    image: caddy:alpine
+    container_name: portfolio-caddy
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    command: caddy reverse-proxy --from api.wannndev.online --to backend:8000
+    volumes:
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - backend
+
+volumes:
+  postgres_data:
+  caddy_data:
+  caddy_config:
