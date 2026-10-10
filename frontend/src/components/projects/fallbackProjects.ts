@@ -3,32 +3,32 @@ import type { ProjectShowcase } from "@/lib/api";
 export const fallbackProjects: ProjectShowcase[] = [
   {
     id: 1,
-    name: "shadcn/studio",
-    duration: "2 Months",
-    period: "March 2025 - May 2025",
-    logo: "/images/project/image-10.webp",
+    name: "UmrohApps",
+    duration: "3 Months",
+    period: "Juni 2026 - September 2026",
+    logo: "/uploads/1791602342_whatsapp-image-2026-10-10-at-101819-am.png",
     description:
-      "shadcn/studio is an all-in-one design system and toolkit that seamlessly blends design and development. It offers a comprehensive set of customizable UI components, Figma kits, and real-time collaboration tools, making it easier for teams to build scalable and consistent user interfaces. With integration support for popular frameworks like React, Next.js, and Tailwind CSS, shadcn/studio streamlines workflows, enhances productivity, and ensures design consistency from concept to deployment. It's the perfect solution for creating high-quality, user-centric products with ease and efficiency.",
+      "UmrohApps adalah sistem desain dan platform digital terpadu yang memadukan manajemen travel umroh dengan kemudahan interaksi pengguna. Menyediakan komponen UI siap pakai, desain Figma terstruktur, dan integrasi data real-time untuk membangun antarmuka yang konsisten dan skalabel.",
     features: [
       {
         title: "Design System",
         detail:
-          "A robust set of UI components and design patterns that ensure consistency and scalability across digital products.",
+          "Rangkaian komponen UI dan pola desain yang kokoh untuk memastikan konsistensi di seluruh produk digital.",
       },
       {
         title: "Figma Kit",
         detail:
-          "A meticulously crafted Figma library with auto-layout, design tokens, and synchronized variant sets.",
+          "Pustaka Figma lengkap dengan auto-layout, design tokens, dan varian komponen yang tersinkronisasi.",
       },
       {
         title: "Customizable",
         detail:
-          "Easily adaptable to meet brand-specific needs with support for theming, styling, and component customization.",
+          "Mudah disesuaikan dengan kebutuhan alur operasional brand travel umroh melalui dukungan theming dan kustomisasi komponen.",
       },
       {
         title: "Real-Time Collaboration",
         detail:
-          "Enable teams to work together effectively by integrating design and code, ensuring alignment at every stage of the development process.",
+          "Memungkinkan tim bekerja sama secara efektif dengan menghubungkan alur desain dan implementasi kode.",
       },
     ],
     tools: [
@@ -40,22 +40,22 @@ export const fallbackProjects: ProjectShowcase[] = [
   },
   {
     id: 2,
-    name: "FlyonUI",
-    duration: "3 Months",
-    period: "Jan 2025 - March 2025",
-    logo: "/images/project/image-09.webp",
+    name: "Billing WA",
+    duration: "1 Months",
+    period: "Juni 2026 - Juli 2026",
+    logo: "/uploads/1791602372_whatsapp-image-2026-10-10-at-101819-am-1.png",
     description:
-      "FlyonUI is an open-source Tailwind CSS component library designed for high accessibility and developer speed with pre-built components and semantic styling.",
+      "Billing WA adalah platform otomatisasi tagihan dan notifikasi WhatsApp yang dirancang untuk kecepatan integrasi, aksesibilitas tinggi, dan pelacakan status pembayaran pelanggan secara real-time.",
     features: [
       {
         title: "Semantic Elements",
         detail:
-          "Crafted with HTML5 semantic guidelines and ARIA compliance for universal accessibility.",
+          "Dibangun mengikuti standar web modern dan aksesibilitas ramah pengguna untuk pengalaman terbaik.",
       },
       {
         title: "Speed Focused",
         detail:
-          "Lightweight footprint with zero runtime overhead and rapid prototyping utilities.",
+          "Performa sangat ringan tanpa beban latensi dan mendukung otomasi notifikasi secara instan.",
       },
     ],
     tools: [
@@ -65,45 +65,23 @@ export const fallbackProjects: ProjectShowcase[] = [
     sort_order: 2,
   },
   {
-    id: 3,
-    name: "Jetship",
-    duration: "4 Months",
-    period: "Sep 2024 - Dec 2024",
-    logo: "/images/project/image-08.webp",
-    description:
-      "Jetship is a modern boilerplate and launchpad for founders to ship SaaS products in days instead of months with integrated auth, billing, and dashboards.",
-    features: [
-      {
-        title: "SaaS Architecture",
-        detail:
-          "Battle-tested Next.js and API architecture with out-of-the-box payment integration.",
-      },
-      {
-        title: "Dashboard UI",
-        detail: "Clean analytics charts, user settings, and billing portal.",
-      },
-    ],
-    tools: [{ name: "Figma", image: "/images/project/image-13.webp" }],
-    sort_order: 3,
-  },
-  {
     id: 4,
-    name: "Themeselection",
-    duration: "10 Months",
-    period: "May 2024 - Dec 2024",
+    name: "HRIS Outsourcing",
+    duration: "2 Months",
+    period: "Juli 2026 - September 2026",
     logo: "/images/project/image-07.webp",
     description:
-      "Premium UI kits, admin templates, and design resources trusted by over 300,000+ developers worldwide.",
+      "HRIS Outsourcing adalah platform manajemen SDM dan alih daya tenaga kerja terpadu, mencakup modul penggajian, absensi, data kontrak kerja, dan analitik produktivitas karyawan.",
     features: [
       {
         title: "Template Suite",
         detail:
-          "Extensive collection of dashboard layouts, ecommerce screens, and CRM pages.",
+          "Koleksi lengkap tata letak dashboard interaktif untuk analitik karyawan, penggajian, dan laporan kehadiran.",
       },
       {
         title: "Design Consistency",
         detail:
-          "Unified visual language across multiple tech stacks and UI frameworks.",
+          "Bahasa visual yang konsisten dan profesional di seluruh tech stack dan antarmuka enterprise.",
       },
     ],
     tools: [
@@ -111,5 +89,31 @@ export const fallbackProjects: ProjectShowcase[] = [
       { name: "Framer", image: "/images/project/image-12.webp" },
     ],
     sort_order: 4,
+  },
+  {
+    id: 5,
+    name: "Portofolio Website",
+    duration: "2 Days",
+    period: "8 Oct - 10 Oct 2026",
+    logo: "/images/logo.png",
+    description:
+      "Website portofolio profesional interaktif yang dirancang dengan estetika modern, animasi halus, performa tinggi, dan navigasi ramah pengguna.",
+    features: [
+      {
+        title: "Design System",
+        detail:
+          "Pondasi visual yang terstruktur dengan warna yang harmonis, mode gelap/terang, dan micro-interactions.",
+      },
+      {
+        title: "Figma Kit",
+        detail:
+          "Eksplorasi visual dan prototyping presisi piksel tinggi sebelum diimplementasikan ke dalam kode.",
+      },
+    ],
+    tools: [
+      { name: "Figma", image: "/images/project/image-13.webp" },
+      { name: "Framer", image: "/images/project/image-12.webp" },
+    ],
+    sort_order: 5,
   },
 ];

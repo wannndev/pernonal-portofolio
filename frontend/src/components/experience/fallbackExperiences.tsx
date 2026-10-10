@@ -3,7 +3,7 @@ import type { GroupedExperience } from "./types";
 
 export const fallbackExperiences: GroupedExperience[] = [
   {
-    company: "UX studio",
+    company: "Kalapa Technology",
     logo: (
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 3C0 1.34315 1.34315 0 3 0H21V15C21 18.3137 18.3137 21 15 21H0V3Z" fill="currentColor" />
@@ -14,45 +14,20 @@ export const fallbackExperiences: GroupedExperience[] = [
     roles: [
       {
         id: 1,
-        role: "Sr. UX Designer",
-        employment_type: "Full-time",
-        period: "2025- Present",
+        role: "IT Development",
+        employment_type: "Intern",
+        period: "Feb 2026 - Mei 2026",
         bullets: [
-          "Lead end-to-end design strategy for scalable multi-platform digital products.",
-          "Architect unified design systems and collaborate across cross-functional engineering pods.",
-          "Conduct data-informed UX research and usability validation with global audiences.",
+          "Merancang arsitektur design system komprehensif yang digunakan di seluruh aplikasi web enterprise.",
+          "Melakukan riset pengujian pengguna mendalam dan prototipe berulang yang meningkatkan tingkat penyelesaian tugas hingga 35%.",
+          "Berkolaborasi langsung dengan pimpinan tim engineering untuk serah terima komponen presisi tinggi di Next.js.",
         ],
-        skills: ["Design Systems", "Figma", "User Research", "Next.js"],
-      },
-      {
-        id: 2,
-        role: "Jr. UX Designer",
-        employment_type: "Full-time",
-        period: "2024 - 2025",
-        bullets: [
-          "Expert in creating user-centered and intuitive digital experiences.",
-          "Skilled in wireframing, prototyping, and interactive design.",
-          "Strong eye for visual design, layout, and consistency.",
-          "Collaborative problem-solver focused on seamless user journeys.",
-        ],
-        skills: ["UI Design", "Mobile app Design", "Website UI Design"],
-      },
-      {
-        id: 3,
-        role: "UI/UX Designer",
-        employment_type: "Full-time",
-        period: "2023 - 2024",
-        bullets: [
-          "Transformed complex technical requirements into user-friendly digital interfaces.",
-          "Created visual identity guidelines and responsive screen components.",
-          "Delivered 12+ client projects on schedule with stellar reviews.",
-        ],
-        skills: ["UI Design", "Interaction Design", "Adobe XD"],
+        skills: ["Figma", "Design Systems", "User Research", "Next.js"],
       },
     ],
   },
   {
-    company: "Creative Team",
+    company: "Jaritechnology Inovation",
     logo: (
       <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect width="21" height="21" rx="5" fill="currentColor" />
@@ -65,29 +40,16 @@ export const fallbackExperiences: GroupedExperience[] = [
     ),
     roles: [
       {
-        id: 4,
-        role: "UI Designer",
-        employment_type: "Full-time",
-        period: "2022 - 2023",
+        id: 3,
+        role: "Software Developer",
+        employment_type: "Penuh Waktu",
+        period: "Juni 2026 - Present",
         bullets: [
-          "Focused on visual assets, graphic branding, and responsive layout styling.",
-          "Crafted marketing website layouts and email campaign graphics.",
-          "Optimized digital assets for fast web delivery and responsive scaling.",
+          "Mengubah kebutuhan teknis kompleks menjadi antarmuka digital yang mudah digunakan.",
+          "Menciptakan panduan identitas visual dan komponen layar responsif.",
+          "Menyelesaikan 12+ proyek klien tepat waktu dengan ulasan memuaskan.",
         ],
-        skills: ["Figma", "Canva", "Photoshop"],
-      },
-      {
-        id: 5,
-        role: "Intern UI Designer",
-        employment_type: "Full-time",
-        period: "2021 - 2022",
-        bullets: [
-          "Passionate about crafting clean, user-friendly interface designs.",
-          "Skilled in wireframing, prototyping, and basic usability testing.",
-          "Familiar with design tools like Figma, Adobe XD, and Sketch.",
-          "Eager to learn, collaborate, and grow in real-world design projects.",
-        ],
-        skills: ["Figma", "Design Systems", "Canva", "Adobe XD", "Sketch"],
+        skills: ["UI Design", "Interaction Design", "Adobe XD"],
       },
     ],
   },
