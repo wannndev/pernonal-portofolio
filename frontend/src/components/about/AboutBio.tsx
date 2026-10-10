@@ -31,12 +31,12 @@ export function AboutBio({ profile, paragraphs }: AboutBioProps) {
         </div>
 
         {/* Name, Title & Social Links */}
-        <div className="flex items-center justify-between gap-2 max-sm:flex-col max-sm:items-stretch">
-          <div className="flex items-center gap-3">
-            <h3 className="text-xl font-semibold text-[var(--foreground)]">
+        <div className="flex items-center justify-between gap-3 max-sm:flex-col max-sm:items-start">
+          <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+            <h3 className="text-lg sm:text-xl font-semibold text-[var(--foreground)]">
               {profile?.name || "John Doe"}
             </h3>
-            <p className="text-[var(--muted-foreground)] text-lg">
+            <p className="text-[var(--muted-foreground)] text-base sm:text-lg">
               {profile?.title || "UI/UX Designer"}
             </p>
           </div>

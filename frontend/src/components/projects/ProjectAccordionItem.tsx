@@ -155,23 +155,23 @@ export function ProjectAccordionItem({
           isOpen ? "border-b border-[var(--border)]" : ""
         }`}
       >
-        <span className="flex items-center">
+        <span className="flex items-center min-w-0 flex-1">
           {project.logo && (
             <img
               src={project.logo}
               alt={project.name}
-              className={`m-3 sm:m-6 size-10 object-contain ${
+              className={`m-2 sm:m-6 size-8 sm:size-10 shrink-0 object-contain ${
                 project.logo.startsWith("/images/project/") ? "dark:invert" : ""
               }`}
             />
           )}
-          <div className="flex flex-col gap-1.5 border-l border-[var(--border)] px-4 sm:px-6 py-2 sm:py-4 text-xl">
-            <span className="font-semibold text-[var(--foreground)]">
+          <div className="flex flex-col gap-1 sm:gap-1.5 border-l border-[var(--border)] px-3 sm:px-6 py-1.5 sm:py-4 text-base sm:text-xl min-w-0">
+            <span className="font-semibold text-[var(--foreground)] truncate sm:whitespace-normal">
               {project.name}
             </span>
-            <div className="text-[var(--muted-foreground)] flex items-center gap-3 font-normal text-sm sm:text-base">
+            <div className="text-[var(--muted-foreground)] flex items-center gap-2 sm:gap-3 font-normal text-xs sm:text-base">
               <span>{getLocalizedPeriod(project.duration)}</span>
-              <div className="shrink-0 bg-[var(--muted-foreground)]/60 h-4 w-0.5 max-sm:hidden"></div>
+              <div className="shrink-0 bg-[var(--muted-foreground)]/60 h-3 sm:h-4 w-0.5 max-sm:hidden"></div>
               <span className="max-sm:hidden">
                 {getLocalizedPeriod(project.period)}
               </span>

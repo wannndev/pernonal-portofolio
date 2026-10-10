@@ -9,7 +9,8 @@ import type { PortfolioProject } from "@/lib/api";
 interface PortfolioCardProps {
   project: PortfolioProject;
   categoryLabel: string;
-  isMobile: boolean;
+  isMobile?: boolean;
+  isDesktop?: boolean;
   motionStyle?: any;
   zIndexClass: string;
   rotateHoverClass: string;
@@ -21,7 +22,8 @@ interface PortfolioCardProps {
 export function PortfolioCard({
   project,
   categoryLabel,
-  isMobile,
+  isMobile = false,
+  isDesktop = false,
   motionStyle,
   zIndexClass,
   rotateHoverClass,
@@ -59,25 +61,25 @@ export function PortfolioCard({
 
       <motion.div
         style={
-          isMobile
-            ? {}
-            : {
+          isDesktop
+            ? {
                 opacity: textOpacity,
                 translateY: textTranslateY,
                 scale: textScale,
               }
+            : {}
         }
         className="flex items-center justify-between gap-4 pt-1"
       >
         <div className="flex flex-col gap-1 min-w-0">
-          <span className="text-2xl font-bold text-[var(--foreground)] group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors truncate">
+          <span className="text-xl sm:text-2xl font-bold text-[var(--foreground)] group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors truncate">
             {project.title}
           </span>
-          <span className="text-base text-[var(--muted-foreground)] truncate">
+          <span className="text-sm sm:text-base text-[var(--muted-foreground)] truncate">
             {categoryLabel}
           </span>
         </div>
-        <div className="w-10 h-10 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--foreground)] group-hover:bg-[var(--primary)] group-hover:text-[var(--primary-foreground)] group-hover:border-transparent transition-all shadow-xs shrink-0">
+        <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[var(--border)] flex items-center justify-center text-[var(--foreground)] group-hover:bg-[var(--primary)] group-hover:text-[var(--primary-foreground)] group-hover:border-transparent transition-all shadow-xs shrink-0">
           <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:-rotate-45" />
         </div>
       </motion.div>
@@ -86,9 +88,9 @@ export function PortfolioCard({
 
   return (
     <motion.div
-      style={isMobile ? {} : motionStyle}
+      style={isDesktop ? motionStyle : {}}
       className={`group relative ${
-        !isMobile && zIndexClass
+        isDesktop && zIndexClass
           ? `${zIndexClass} will-change-transform perspective-distant transform-3d`
           : ""
       }`}

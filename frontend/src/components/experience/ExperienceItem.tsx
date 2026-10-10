@@ -134,10 +134,10 @@ export function ExperienceItem({
             </span>
           </div>
 
-          <div className="text-[var(--muted-foreground)] flex items-center gap-3 px-9 sm:px-11 text-base sm:text-xl font-normal">
+          <div className="text-[var(--muted-foreground)] flex items-center gap-2 sm:gap-3 px-8 sm:px-11 text-xs sm:text-base font-normal flex-wrap">
             <span>{getEmploymentTypeLabel()}</span>
-            <div className="shrink-0 bg-[var(--muted-foreground)]/60 self-center h-4 w-0.5 max-sm:hidden"></div>
-            <span className="max-sm:hidden">{getLocalizedPeriod(item.period)}</span>
+            <div className="shrink-0 bg-[var(--muted-foreground)]/60 self-center h-3 w-0.5"></div>
+            <span>{getLocalizedPeriod(item.period)}</span>
           </div>
         </div>
 

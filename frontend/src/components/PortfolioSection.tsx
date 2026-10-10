@@ -56,6 +56,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
   }, []);
 
   const isMobile = mounted && windowWidth < 768;
+  const isDesktop = mounted && windowWidth >= 768;
   const t = getScrollTransforms(windowWidth);
 
   // Active transforms driven by scroll position
@@ -87,7 +88,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
   return (
     <section
       id="portfolio"
-      className="relative flex-1 py-12 sm:py-16 border-b border-[var(--border)] overflow-visible z-20"
+      className="relative flex-1 py-12 sm:py-16 border-b border-[var(--border)] overflow-hidden md:overflow-visible z-20"
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 lg:border-x border-[var(--border)] bg-[var(--background)]">
         {/* Section Header */}
@@ -117,7 +118,8 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               project={items[0]}
               categoryLabel={getCategoryLabel(items[0].category)}
               isMobile={isMobile}
-              motionStyle={{ translateY: card1Y, translateX: card1X, scale: divScale }}
+              isDesktop={isDesktop}
+              motionStyle={isDesktop ? { translateY: card1Y, translateX: card1X, scale: divScale } : {}}
               zIndexClass="z-40"
               rotateHoverClass="group-hover:rotate-2"
               textOpacity={textOpacity}
@@ -131,12 +133,17 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               project={items[1]}
               categoryLabel={getCategoryLabel(items[1].category)}
               isMobile={isMobile}
-              motionStyle={{
-                translateY: card2Y,
-                translateX: card2X,
-                scale: divScale,
-                rotate: card2Rotate,
-              }}
+              isDesktop={isDesktop}
+              motionStyle={
+                isDesktop
+                  ? {
+                      translateY: card2Y,
+                      translateX: card2X,
+                      scale: divScale,
+                      rotate: card2Rotate,
+                    }
+                  : {}
+              }
               zIndexClass="z-30"
               rotateHoverClass="group-hover:-rotate-2"
               textOpacity={textOpacity}
@@ -150,12 +157,17 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               project={items[2]}
               categoryLabel={getCategoryLabel(items[2].category)}
               isMobile={isMobile}
-              motionStyle={{
-                translateY: card3Y,
-                translateX: card3X,
-                scale: divScale,
-                rotate: card3Rotate,
-              }}
+              isDesktop={isDesktop}
+              motionStyle={
+                isDesktop
+                  ? {
+                      translateY: card3Y,
+                      translateX: card3X,
+                      scale: divScale,
+                      rotate: card3Rotate,
+                    }
+                  : {}
+              }
               zIndexClass="z-20"
               rotateHoverClass="group-hover:rotate-2"
               textOpacity={textOpacity}
@@ -169,12 +181,17 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               project={items[3]}
               categoryLabel={getCategoryLabel(items[3].category)}
               isMobile={isMobile}
-              motionStyle={{
-                translateY: card4Y,
-                translateX: card4X,
-                scale: divScale,
-                rotate: card4Rotate,
-              }}
+              isDesktop={isDesktop}
+              motionStyle={
+                isDesktop
+                  ? {
+                      translateY: card4Y,
+                      translateX: card4X,
+                      scale: divScale,
+                      rotate: card4Rotate,
+                    }
+                  : {}
+              }
               zIndexClass="z-10"
               rotateHoverClass="group-hover:-rotate-2"
               textOpacity={textOpacity}
@@ -190,6 +207,7 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
               project={p}
               categoryLabel={getCategoryLabel(p.category)}
               isMobile={isMobile}
+              isDesktop={isDesktop}
               zIndexClass="z-0"
               rotateHoverClass={idx % 2 === 0 ? "group-hover:rotate-2" : "group-hover:-rotate-2"}
               textOpacity={textOpacity}
