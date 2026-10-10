@@ -1,7 +1,11 @@
 import { cache } from 'react';
 import certificatesData from '@/data/certificates.json';
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000/api';
+const API_BASE_URL =
+  process.env.NEXT_PUBLIC_API_URL ||
+  (process.env.NODE_ENV === 'production'
+    ? 'http://31.97.67.77:8000/api'
+    : 'http://127.0.0.1:8000/api');
 
 export interface ProfileInfo {
   name: string;
@@ -577,14 +581,13 @@ export async function fetchBrandLogos(): Promise<BrandLogo[]> {
   }
 
   return [
-    { id: 1, name: 'Product Hunt', logo: '/images/brand-logo/product-hunt-logo-bw.webp', sort_order: 1 },
-    { id: 2, name: 'Reddit', logo: '/images/brand-logo/reddit-logo-bw.webp', sort_order: 2 },
-    { id: 3, name: 'Medium', logo: '/images/brand-logo/medium-logo-bw.webp', sort_order: 3 },
+    { id: 1, name: 'Laravel', logo: '/uploads/1791600021_png-clipart-laravel-black-logo-tech-companies.png', sort_order: 1 },
+    { id: 2, name: 'Docker', logo: '/uploads/docker.svg', sort_order: 2 },
+    { id: 3, name: 'PostgreSQL', logo: '/uploads/postgresql.svg', sort_order: 3 },
     { id: 4, name: 'Dev.to', logo: '/images/brand-logo/devto-logo-bw.webp', sort_order: 4 },
-    { id: 5, name: 'daily.dev', logo: '/images/brand-logo/dailydev-logo-bw.webp', sort_order: 5 },
-    { id: 6, name: 'Best of JS', logo: '/images/brand-logo/bestofjs-logo-bw.webp', sort_order: 6 },
-    { id: 7, name: 'Y Combinator', logo: '/images/brand-logo/ycombinator-logo-bw.webp', sort_order: 7 },
-    { id: 8, name: 'Launchtory', logo: '/images/brand-logo/launchtory-logo-bw.webp', sort_order: 8 },
+    { id: 5, name: 'Next JS', logo: '/uploads/nextjs.svg', sort_order: 5 },
+    { id: 6, name: 'Vue JS', logo: '/uploads/vuejs.svg', sort_order: 6 },
+    { id: 7, name: 'React JS', logo: '/uploads/react.svg', sort_order: 7 },
   ];
 }
 
@@ -597,15 +600,14 @@ export async function fetchDesignTools(): Promise<DesignTool[]> {
   }
 
   return [
-    { id: 1, name: "Figma", href: "https://figma.com", icon: "/images/about/image-19.webp", dark_icon: null, show_name: true, sort_order: 1 },
-    { id: 2, name: "Framer", href: "https://framer.com", icon: "/images/about/image-20.webp", dark_icon: "/images/about/image-20-dark.webp", show_name: true, sort_order: 2 },
-    { id: 3, name: "Blender", href: "https://blender.org", icon: "/images/about/image-21.webp", dark_icon: null, show_name: true, sort_order: 3 },
-    { id: 4, name: "Webflow", href: "https://webflow.com", icon: "/images/about/image-22.webp", dark_icon: null, show_name: true, sort_order: 4 },
-    { id: 5, name: "Notion", href: "https://notion.so", icon: "/images/about/image-23.webp", dark_icon: "/images/about/image-23-dark.webp", show_name: true, sort_order: 5 },
-    { id: 6, name: "GitHub", href: "https://github.com", icon: "/images/about/image-24.webp", dark_icon: "/images/about/image-24-dark.webp", show_name: true, sort_order: 6 },
-    { id: 7, name: "Adobe XD", href: "https://adobe.com/products/xd", icon: "/images/about/image-25.webp", dark_icon: null, show_name: true, sort_order: 7 },
-    { id: 8, name: "Miro", href: "https://miro.com", icon: "/images/about/image-26.webp", dark_icon: null, show_name: true, sort_order: 8 },
-    { id: 9, name: "Canva", href: "https://canva.com", icon: "/images/about/image-27.webp", dark_icon: null, show_name: false, sort_order: 9 },
+    { id: 1, name: 'Figma', href: 'https://figma.com', icon: '/images/about/image-19.webp', dark_icon: null, show_name: true, sort_order: 1 },
+    { id: 2, name: 'Visual Studio Code', href: 'https://code.visualstudio.com/docs/remote/vscode-web', icon: '/uploads/1791600384_visual-studio-code-logo.svg', dark_icon: '/images/about/image-20-dark.webp', show_name: true, sort_order: 2 },
+    { id: 3, name: 'PostgreSQL', href: 'https://www.postgresql.org/', icon: '/uploads/1791600453_png-transparent-postgresql-plain-wordmark-logo-icon.png', dark_icon: null, show_name: true, sort_order: 3 },
+    { id: 4, name: 'Laravel', href: null, icon: '/uploads/1791600917_png-clipart-laravel-black-logo-tech-companies.png', dark_icon: null, show_name: true, sort_order: 4 },
+    { id: 5, name: 'Next JS', href: null, icon: '/uploads/1791600939_nextjs2106logowikcom.png', dark_icon: null, show_name: true, sort_order: 5 },
+    { id: 6, name: 'GitHub', href: 'https://github.com', icon: '/images/about/image-24.webp', dark_icon: '/images/about/image-24-dark.webp', show_name: true, sort_order: 6 },
+    { id: 7, name: 'Vue JS', href: null, icon: '/uploads/1791600573_vuejs-logo-2svg.png', dark_icon: null, show_name: true, sort_order: 8 },
+    { id: 8, name: 'Docker', href: null, icon: '/uploads/1791601056_oip.png', dark_icon: null, show_name: true, sort_order: 9 },
   ];
 }
 
