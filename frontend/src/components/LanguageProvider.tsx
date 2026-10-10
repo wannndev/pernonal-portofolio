@@ -22,7 +22,7 @@ const LanguageContext = createContext<LanguageContextType>({
   t: () => "",
 });
 
-const STORAGE_KEY = "portfolio_language";
+const STORAGE_KEY = "portfolio_language_v2";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   // English is default
@@ -31,6 +31,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     try {
+      // Clear legacy storage key if present to prevent sticking to Indonesian
+      if (typeof window !== "undefined" && localStorage.getItem("portfolio_language")) {
+        localStorage.removeItem("portfolio_language");
+      }
+
       const saved = localStorage.getItem(STORAGE_KEY) as Language | null;
       if (saved === "en" || saved === "id") {
         setLanguageState(saved);
