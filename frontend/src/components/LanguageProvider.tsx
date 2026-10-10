@@ -16,8 +16,8 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType>({
   language: "id", // Default Indonesian as requested
-  setLanguage: () => {},
-  toggleLanguage: () => {},
+  setLanguage: () => { },
+  toggleLanguage: () => { },
   d: translations.id,
   t: () => "",
 });

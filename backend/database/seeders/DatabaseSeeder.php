@@ -385,10 +385,16 @@ class DatabaseSeeder extends Seeder
             Blog::create($blog);
         }
 
-        $certificatesJson = file_get_contents(base_path('../frontend/src/data/certificates.json'));
-        if ($certificatesJson) {
-            $certs = json_decode($certificatesJson, true);
-            foreach ($certs as $idx => $c) {
+        $certPath = file_exists(resource_path('data/certificates.json'))
+            ? resource_path('data/certificates.json')
+            : base_path('../frontend/src/data/certificates.json');
+
+        if (file_exists($certPath)) {
+            $certificatesJson = file_get_contents($certPath);
+            if ($certificatesJson) {
+                $certs = json_decode($certificatesJson, true);
+                if (is_array($certs)) {
+                    foreach ($certs as $idx => $c) {
                 Certificate::updateOrCreate(
                     ['slug' => $c['id']],
                     [
@@ -412,6 +418,8 @@ class DatabaseSeeder extends Seeder
                 );
             }
         }
+    }
+}
 
         // 8. Brand Logos Seeding
         $brandLogos = [
