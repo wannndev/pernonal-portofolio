@@ -15,18 +15,18 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  language: "id", // Default Indonesian as requested
+  language: "en", // Default English
   setLanguage: () => { },
   toggleLanguage: () => { },
-  d: translations.id,
+  d: translations.en,
   t: () => "",
 });
 
 const STORAGE_KEY = "portfolio_language";
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  // Indonesian is default as requested ("tpi default nya indonesia yak")
-  const [language, setLanguageState] = useState<Language>("id");
+  // English is default
+  const [language, setLanguageState] = useState<Language>("en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -36,8 +36,8 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
         setLanguageState(saved);
         document.documentElement.lang = saved;
       } else {
-        setLanguageState("id");
-        document.documentElement.lang = "id";
+        setLanguageState("en");
+        document.documentElement.lang = "en";
       }
     } catch {
       // Ignore localStorage read errors in private browsing
@@ -56,11 +56,11 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   };
 
   const toggleLanguage = () => {
-    setLanguage(language === "id" ? "en" : "id");
+    setLanguage(language === "en" ? "id" : "en");
   };
 
   const d = useMemo(() => {
-    return translations[language] || translations.id;
+    return translations[language] || translations.en;
   }, [language]);
 
   // Dot notation string resolver helper

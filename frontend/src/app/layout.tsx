@@ -51,7 +51,7 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="id"
+      lang="en"
       className={`${inter.variable} ${geistMono.variable} ${spaceGrotesk.variable} min-h-screen antialiased`}
       suppressHydrationWarning
     >

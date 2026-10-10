@@ -62,7 +62,7 @@ export function LanguageSwitcher({ variant = "desktop" }: LanguageSwitcherProps)
             ? "bg-[var(--foreground)] text-[var(--background)] shadow-xs font-bold"
             : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
         }`}
-        title="Bahasa Indonesia (Default)"
+        title="Bahasa Indonesia"
         aria-pressed={language === "id"}
       >
         <span className="text-[12px] leading-none">🇮🇩</span>
@@ -76,7 +76,7 @@ export function LanguageSwitcher({ variant = "desktop" }: LanguageSwitcherProps)
             ? "bg-[var(--foreground)] text-[var(--background)] shadow-xs font-bold"
             : "text-[var(--muted-foreground)] hover:text-[var(--foreground)]"
         }`}
-        title="English"
+        title="English (Default)"
         aria-pressed={language === "en"}
       >
         <span className="text-[12px] leading-none">🇬🇧</span>
