@@ -28,7 +28,7 @@ class DatabaseSeeder extends Seeder
                 'email_verified_at' => now(),
             ]
         );
-        ProfileInfo::create([
+        ProfileInfo::updateOrCreate(['id' => 1], [
             'name' => 'John Doe',
             'title' => 'UI/UX Designer',
             'availability_badge' => 'Available for next months | 2 slots free',
@@ -103,7 +103,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($portfolioProjects as $proj) {
-            PortfolioProject::create($proj);
+            PortfolioProject::updateOrCreate(['slug' => $proj['slug']], $proj);
         }
 
         $services = [
@@ -146,7 +146,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($services as $service) {
-            Service::create($service);
+            Service::updateOrCreate(['title' => $service['title']], $service);
         }
 
         $experiences = [
@@ -223,7 +223,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($experiences as $exp) {
-            Experience::create($exp);
+            Experience::updateOrCreate(['company' => $exp['company'], 'role' => $exp['role']], $exp);
         }
 
         $projectsShowcase = [
@@ -296,7 +296,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($projectsShowcase as $ps) {
-            ProjectShowcase::create($ps);
+            ProjectShowcase::updateOrCreate(['name' => $ps['name']], $ps);
         }
 
         $testimonials = [
@@ -330,7 +330,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($testimonials as $t) {
-            Testimonial::create($t);
+            Testimonial::updateOrCreate(['name' => $t['name']], $t);
         }
 
         $blogs = [
@@ -382,7 +382,7 @@ class DatabaseSeeder extends Seeder
         ];
 
         foreach ($blogs as $blog) {
-            Blog::create($blog);
+            Blog::updateOrCreate(['slug' => $blog['slug']], $blog);
         }
 
         $certPath = file_exists(resource_path('data/certificates.json'))
