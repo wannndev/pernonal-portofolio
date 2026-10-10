@@ -23,11 +23,6 @@ const defaultSkillsRow1 = [
   "UI Design",
   "UX Design",
   "Canva",
-  "Blender",
-  "Photoshop",
-  "Research",
-  "Graphics",
-  "Copywriting",
 ];
 
 const defaultSkillsRow2 = [
@@ -35,11 +30,10 @@ const defaultSkillsRow2 = [
   "Tailwind CSS",
   "React",
   "TypeScript",
-  "Framer Motion",
   "Design Systems",
   "Responsive Web",
-  "Wireframing",
   "User Flows",
+  "Landing Page Design",
 ];
 
 export function ServicesSection({
