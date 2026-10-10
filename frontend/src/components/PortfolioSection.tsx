@@ -14,7 +14,12 @@ interface PortfolioSectionProps {
 
 export function PortfolioSection({ projects }: PortfolioSectionProps) {
   const { d, language } = useLanguage();
-  const [windowWidth, setWindowWidth] = useState(1280);
+  const [windowWidth, setWindowWidth] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth;
+    }
+    return 0;
+  });
   const [mounted, setMounted] = useState(false);
   const [scrollStart, setScrollStart] = useState(150);
   const [scrollEnd, setScrollEnd] = useState(650);
@@ -55,9 +60,9 @@ export function PortfolioSection({ projects }: PortfolioSectionProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const isMobile = mounted && windowWidth < 768;
   const isDesktop = mounted && windowWidth >= 768;
-  const t = getScrollTransforms(windowWidth);
+  const isMobile = !isDesktop;
+  const t = getScrollTransforms(isDesktop ? windowWidth : 0);
 
   // Active transforms driven by scroll position
   const card1Y = useTransform(smoothScrollY, [scrollStart, scrollEnd], [`${t.div1TranslateY}px`, "0px"]);
